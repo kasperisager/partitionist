@@ -98,8 +98,8 @@ func (group Group) partitionByService(cluster Cluster) []Group {
 
 	// First pass: Join servers in groups according to their associated services
 	// such that servers running the same services will be grouped. This ensures
-	// that the resulting groups can be treated indenpently as no two groups will
-	// contain servers running the same services.
+	// that the resulting groups can be treated independently as no two groups 
+	// will contain servers running the same services.
 	for i, server := range group.Servers {
 		for _, allocation := range server.Allocations {
 			service := allocation.Service
